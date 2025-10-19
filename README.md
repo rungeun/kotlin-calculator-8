@@ -13,8 +13,8 @@
         - 빈문자는 커스텀 구분자로 등록할 수 없어야 함
     - [ ] 커스텀 구분자 예약 부분(//x\n) 제외하여 저장
     - [ ] 커스텀 구분자를 기준 문자열을 나눔
-- [ ] **기본 구분자 처리 : (feature/WWC-11-default-delimiter)**
-    - [ ] 기본 구분자를 기준으로 문자열을 나눔
+- [x] **구분자 처리 : (feature/WWC-11-default-delimiter)**
+    - [x] 기본 구분자 + 커스텀 구분자를 기준으로 문자열을 나눔
 - [ ] **숫자 변환기 : (feature/WWC-16-number-converter)**
     - [ ] 최종적으로 나눠진 문자열 각각들을 숫자로 변환 함
     - [ ] 숫자로 변환할 수 없는 문자가 있을 경우 예외를 던짐
@@ -61,15 +61,23 @@
     │           ├── Application.kt
     │           ├── controller
     │           │   └── CalculatorController.kt
+    │           │   └── SplitController.kt
+    │           ├── model
+    │           │   ├── domain
+    │           │   │   └── TextData.kt
+    │           │   └── repository
+    │           │       └── TextRepository.kt
     │           └── view
-    │           ├── ConsoleInputView.kt
-    │           └── InputView.kt
+    │               ├── ConsoleInputView.kt
+    │               └── InputView.kt
     └── test 
        └── kotlin 
             └── calculator 
                 ├── ApplicationTest.kt 
+                ├── model
+                │   └── SplitTest.kt
                 └── view 
                     └── InputTest.kt
                     
-58 directories, 204 files
+67 directories, 213 files
 ```

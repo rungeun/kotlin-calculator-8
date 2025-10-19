@@ -6,6 +6,6 @@ fun main() {
     try {
         CalculatorController().run()
     } catch (e: IllegalArgumentException) {
-        println(e)
+        throw (e)
     }
 }

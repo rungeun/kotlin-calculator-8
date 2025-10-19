@@ -7,12 +7,11 @@
 
 - [x] **입력 : (feature/WWC-10-input)**
     - [x] 구분자와 숫자로 구성된 문자열을 입력 받음
-- [ ] **커스텀 구분자 처리 : (feature/WWC-15-custom-delimiter)**
-    - [ ] 커스텀 문자열 형식을 판단
+- [x] **커스텀 구분자 처리 : (feature/WWC-15-custom-delimiter)**
+    - [x] 커스텀 문자열 형식을 판단
         - 커스텀 구분자 문자열은 전체 문자열에서 맨 앞에 와야 함
         - 빈문자는 커스텀 구분자로 등록할 수 없어야 함
-    - [ ] 커스텀 구분자 예약 부분(//x\n) 제외하여 저장
-    - [ ] 커스텀 구분자를 기준 문자열을 나눔
+    - [x] 커스텀 구분자 예약 부분(//x\n) 제외하여 저장
 - [x] **구분자 처리 : (feature/WWC-11-default-delimiter)**
     - [x] 기본 구분자 + 커스텀 구분자를 기준으로 문자열을 나눔
 - [ ] **숫자 변환기 : (feature/WWC-16-number-converter)**
@@ -61,6 +60,7 @@
     │           ├── Application.kt
     │           ├── controller
     │           │   └── CalculatorController.kt
+    │           │   ├── CustomDelimiterController.kt
     │           │   └── SplitController.kt
     │           ├── model
     │           │   ├── domain
@@ -74,10 +74,12 @@
        └── kotlin 
             └── calculator 
                 ├── ApplicationTest.kt 
+                ├── controller
+                │   └── CustomDelimiterTest.kt
                 ├── model
                 │   └── SplitTest.kt
                 └── view 
                     └── InputTest.kt
                     
-67 directories, 213 files
+69 directories, 223 files
 ```

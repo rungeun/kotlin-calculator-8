@@ -1,5 +1,6 @@
 package calculator.controller
 
+import calculator.model.domain.Add
 import calculator.model.domain.Converter
 import calculator.view.ConsoleInputView
 
@@ -10,8 +11,6 @@ class CalculatorController {
         val splitText = SplitController().splitText(checkedString, delimiter)
 
         val converter = Converter().toNumber(splitText)
-        for (arg in splitText) {
-            println("Arg: $arg")
-        }
+        val sum = Add().number(converter)
     }
 }

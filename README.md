@@ -20,8 +20,8 @@
 - [x] **더하기 처리기 : (feature/WWC-13-add-numbers)**
     - [x] 전달 받은 숫자들을 덧셈 연산 함
     - [x] 덧셈 후, 저장할 수 있는 수의 크기를 넘을 경우(MAX+MAX) 예외를 던짐
-- [ ] **출력 : (feature/WWC-14-output)**
-    - [ ] 출력 형식에 맞게 출력 함
+- [x] **출력 : (feature/WWC-14-output)**
+    - [x] 출력 형식에 맞게 출력 함
 
 ![Jira Picture](res/Jira.png)
 
@@ -31,7 +31,7 @@
 |-------|----------------------|------------------------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1     | 음수                   | `-1`                   | `IllegalArgumentException` | 입출력 요구 사항에서 "**구분자와 양수**로 구성된 문자열"을 받는다고 명시되어 있음                                                                                                                                               |
 | 2     | 빈 문자 커스텀 구분자         | `//\n123`              | `IllegalArgumentException` | 기능 요구 사항에서 "사이에 위치하는 **문자**를 컴스텀 구분자로 사용"한다고 되어있음, 해당 경우는 문자 자체가 없기 때문에 예외에 해당함                                                                                                                |
-| 3     | 문자열 중간에서 컴스텀 구분자를 지정 | `1:2//>\n1>2`          | `IllegalArgumentException` | 기능 요구 사항에서 "**문자열 앞부분**"이라고 명시되어 있음                                                                                                                                                            |
+| 3     | 문자열 중간에서 컴스텀 구분자를 지정 | `1:2://>\n1>2`         | `IllegalArgumentException` | 기능 요구 사항에서 "**문자열 앞부분**"이라고 명시되어 있음                                                                                                                                                            |
 | 4     | 정수 커스텀 구분자           | `//1\n2`               | `IllegalArgumentException` | 커스텀 구분자를 정수로 입력 받은 경우에는 해당 정수를 연산할 수 없기에 예외 사항으로 처리함                                                                                                                                           |
 | 5     | \ 커스텀 구분자            | `//\\n1\2\3`           | `결과 : 6`                   | 정상적인 입력임                                                                                                                                                                                       |
 | 6     | / 커스텀 구분자            | `///\n1/2/3`           | `결과: 6`                    | 정상적인 입력임                                                                                                                                                                                       |
@@ -59,7 +59,7 @@
     │       └── calculator
     │           ├── Application.kt
     │           ├── controller
-    │           │   └── CalculatorController.kt
+    │           │   ├── CalculatorController.kt
     │           │   ├── CustomDelimiterController.kt
     │           │   └── SplitController.kt
     │           ├── model
@@ -73,7 +73,9 @@
     │           │       └── TextRepository.kt
     │           └── view
     │               ├── ConsoleInputView.kt
-    │               └── InputView.kt
+    │               ├── ConsoleOutputView.kt
+    │               ├── InputView.kt
+    │               └── OutputView.kt
     └── test 
        └── kotlin 
             └── calculator 
@@ -87,5 +89,5 @@
                 └── view 
                     └── InputTest.kt
                     
-69 directories, 243 files
+69 directories, 252 files
 ```

@@ -14,9 +14,9 @@
     - [x] 커스텀 구분자 예약 부분(//x\n) 제외하여 저장
 - [x] **구분자 처리 : (feature/WWC-11-default-delimiter)**
     - [x] 기본 구분자 + 커스텀 구분자를 기준으로 문자열을 나눔
-- [ ] **숫자 변환기 : (feature/WWC-16-number-converter)**
-    - [ ] 최종적으로 나눠진 문자열 각각들을 숫자로 변환 함
-    - [ ] 숫자로 변환할 수 없는 문자가 있을 경우 예외를 던짐
+- [x] **숫자 변환기 : (feature/WWC-16-number-converter)**
+    - [x] 최종적으로 나눠진 문자열 각각들을 숫자로 변환 함
+    - [x] 숫자로 변환할 수 없는 문자가 있을 경우 예외를 던짐
 - [ ] **더하기 처리기 : (feature/WWC-13-add-numbers)**
     - [ ] 전달 받은 숫자들을 덧셈 연산 함
     - [ ] 덧셈 후, 저장할 수 있는 수의 크기를 넘을 경우(MAX+MAX) 예외를 던짐
@@ -64,8 +64,10 @@
     │           │   └── SplitController.kt
     │           ├── model
     │           │   ├── domain
+    │           │   │   ├── Converter.kt
     │           │   │   └── TextData.kt
     │           │   └── repository
+    │           │       ├── ConverterRepository.kt
     │           │       └── TextRepository.kt
     │           └── view
     │               ├── ConsoleInputView.kt
@@ -77,9 +79,10 @@
                 ├── controller
                 │   └── CustomDelimiterTest.kt
                 ├── model
+                │   ├── NumberConverterTest.kt
                 │   └── SplitTest.kt
                 └── view 
                     └── InputTest.kt
                     
-69 directories, 223 files
+69 directories, 235 files
 ```

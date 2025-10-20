@@ -17,9 +17,9 @@
 - [x] **숫자 변환기 : (feature/WWC-16-number-converter)**
     - [x] 최종적으로 나눠진 문자열 각각들을 숫자로 변환 함
     - [x] 숫자로 변환할 수 없는 문자가 있을 경우 예외를 던짐
-- [ ] **더하기 처리기 : (feature/WWC-13-add-numbers)**
-    - [ ] 전달 받은 숫자들을 덧셈 연산 함
-    - [ ] 덧셈 후, 저장할 수 있는 수의 크기를 넘을 경우(MAX+MAX) 예외를 던짐
+- [x] **더하기 처리기 : (feature/WWC-13-add-numbers)**
+    - [x] 전달 받은 숫자들을 덧셈 연산 함
+    - [x] 덧셈 후, 저장할 수 있는 수의 크기를 넘을 경우(MAX+MAX) 예외를 던짐
 - [ ] **출력 : (feature/WWC-14-output)**
     - [ ] 출력 형식에 맞게 출력 함
 
@@ -64,9 +64,11 @@
     │           │   └── SplitController.kt
     │           ├── model
     │           │   ├── domain
+    │           │   │   ├── Add.kt
     │           │   │   ├── Converter.kt
     │           │   │   └── TextData.kt
     │           │   └── repository
+    │           │       ├── AddSome.kt
     │           │       ├── ConverterRepository.kt
     │           │       └── TextRepository.kt
     │           └── view
@@ -79,10 +81,11 @@
                 ├── controller
                 │   └── CustomDelimiterTest.kt
                 ├── model
+                │   ├── AddNumbersTest.kt
                 │   ├── NumberConverterTest.kt
                 │   └── SplitTest.kt
                 └── view 
                     └── InputTest.kt
                     
-69 directories, 235 files
+69 directories, 243 files
 ```
